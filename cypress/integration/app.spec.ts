@@ -1,10 +1,15 @@
 import { config } from '../config'
 
 describe('App',  () =>  {
-    it('<title> is correct', () => {
+    it('Checking title', () => {
         cy.visit(config.homepageUrl);
         cy.title().should('equal', 'Computers database');
     });
+    
+    it('Clicking on button', () => {
+    cy.get('#add').click();
+    });
+
 
     // xcontext('Querying', () => {
     //     beforeEach(() => {
