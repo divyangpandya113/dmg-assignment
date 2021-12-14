@@ -42,6 +42,32 @@ describe('App',  () =>  {
 
     addNewComputer();
 
+    it('Entering wrong introduce date', () => {
+        cy.get('#name').type('omni');
+        cy.get('#introduced').type('20-03-2011');
+        cy.get('input[type="submit"]').click();
+        cy.get('a[href*="/computers"]').click();
+    });
 
+    addNewComputer();
+
+    it('Entering Discontinued date', () => {
+        cy.get('#name').type('omni');
+        cy.get('#discontinued').type('2021-07-11');
+        cy.get('input[type="submit"]').click();
+    });
+
+    addNewComputer();
+
+    it('Entering wrong Discontinued date', () => {
+        cy.get('#name').type('omni');
+        cy.get('#discontinued').type('20-07-2023');
+        cy.get('input[type="submit"]').click();
+        cy.get('a[href*="/computers"]').click();
+    });
     
+    it('selecting from the drop down', () => {
+        
+    });
+
 });
