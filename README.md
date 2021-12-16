@@ -20,6 +20,12 @@ See:
 - [cypress/plugins/index.js](cypress/plugins/index.js)
 - [example test](cypress/integration/spec.ts)
 
+## filepath
+
+delete tests: "./cypress/integration/app.delete.test.ts"
+view and update tests: "./cypress/integration/app.updates.test.ts"
+create tests: "./cypress/integration/app.test.ts"
+
 ## Commands
 
 The E2E tests should run in Cypress right away. There are few other commands configured in this example recipe as a demonstration.
@@ -41,3 +47,7 @@ Because `cypress` is installed in the root folder of this repo, [tsconfig.json](
 ```
 
 In "normal" installation, TypeScript compiler should be able to find `node_modules/cypress/index.d.ts` automatically.
+
+## Manual Tests
+
+Manual_Tests folder("../dmg_assignment/Manual_Tests") contains the file of manual test cases.(.ods format)
