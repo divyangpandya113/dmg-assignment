@@ -1,5 +1,14 @@
 {
-    "extends": [
-      "plugin:cypress/recommended"
-    ]
+  "extends": [
+    "prettier",
+    "plugin:cypress/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {}
 }
