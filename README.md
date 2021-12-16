@@ -1,4 +1,8 @@
-# Cypress Typescript Webpack Boilerplate
+# Dmg Assignment For Testing
+
+## boilerplate source
+
+The project has been set up through the [boilerplate](https://github.com/neiltownsley/cypress-typescript-webpack-boilerplate) created by @neiltownsley.
 
 ## Set up
 
@@ -20,8 +24,8 @@ See:
 
 The E2E tests should run in Cypress right away. There are few other commands configured in this example recipe as a demonstration.
 
-- `npm run build` runs Webpack to convert spec TS file into `out.js`
-- `npm run lint` lints TypeScript specs using [tslint](https://palantir.github.io/tslint) and then TypeScript compiler to type check.
+- `yarn build` runs Webpack to convert spec TS file into `dist/test.build.js`
+- `yarn lint` lints TypeScript specs using [tslint](https://palantir.github.io/tslint) and then TypeScript compiler to type check.
 
 ## Notes
 
@@ -31,7 +35,7 @@ Because `cypress` is installed in the root folder of this repo, [tsconfig.json](
 {
   "include": [
     "node_modules/cypress/types/*.ts",
-    "cypress/*/*.ts"
+    "cypress/*/*.test.ts"
   ]
 }
 ```
