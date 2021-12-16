@@ -1,4 +1,4 @@
-import { visitAddNewComputer, addComputerForm, notification } from "./app.utils";
+import { visitAddNewComputer, addComputerForm, notification } from "../support/app.utils";
 import { sample } from "lodash";
 import { Computer } from '../types';
 

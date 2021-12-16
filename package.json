@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example showing TypeScript tests with Cypress",
   "scripts": {
-    "build": "webpack --output-filename test.build.js --entry ./cypress/integration/index.ts",
+    "build": "webpack --output-filename test.build.js --entry ./cypress/webpack.entry.ts",
     "lint": "tslint --project ./tsconfig.json",
     "precypress:run": "npm run lint"
   },

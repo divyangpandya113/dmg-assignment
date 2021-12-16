@@ -1,5 +1,5 @@
 import { config } from "../config";
-import { visitAddNewComputer } from './app.utils';
+import { visitAddNewComputer } from '../support/app.utils';
 import { sample } from 'lodash';
 import { Computer } from '../types';
 
