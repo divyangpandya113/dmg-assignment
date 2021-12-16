@@ -33,6 +33,10 @@ The E2E tests should run in Cypress right away. There are few other commands con
 - `yarn build` runs Webpack to convert spec TS file into `dist/test.build.js`
 - `yarn lint` lints TypeScript specs using [tslint](https://palantir.github.io/tslint) and then TypeScript compiler to type check.
 
+## To Run
+
+```yarn run cypress open```
+
 ## Notes
 
 Because `cypress` is installed in the root folder of this repo, [tsconfig.json](tsconfig.json) specifies where to find its types:
