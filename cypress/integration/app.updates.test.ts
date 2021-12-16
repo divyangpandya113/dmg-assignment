@@ -72,11 +72,11 @@ describe("View and updating testing", () => {
     cy.get("table tbody td")
       .eq(0)
       .get("tr")
-      .eq(3)
+      .eq(2)
       .contains("a", computer.name)
       .click();
     cy.get("#discontinued").clear();
-    cy.get("#discontinued").type("20-07-2023");
+    cy.get("#discontinued").type("20-07-2004");
     cy.get('input[Value="Save this computer"]').click();
     cy.get("#discontinued").closest("div.clearfix").should("have.class", "error");
     cy.get("#discontinued").clear();
@@ -94,7 +94,30 @@ describe("View and updating testing", () => {
       .eq(1)
       .contains("a", computer.name)
       .click();
-    cy.get("select").select("RCA");
+    cy.get("select").select(computer.companyName);
+    cy.get('input[Value="Save this computer"]').click();
+    notification().should(
+      "contain",
+      `Done! Computer ${computer.name} has been updated`
+    );
+  });
+
+  it("Updates formData with valid data", () => {
+    cy.get("#searchbox").type(computer.name);
+    cy.get('input[type="submit"]').click();
+    cy.get("table tbody td")
+      .eq(0)
+      .get("tr")
+      .eq(2)
+      .contains("a", computer.name)
+      .click();
+    cy.get("#name").clear();
+    cy.get("#name").type(computer.name);
+    cy.get("#introduced").clear();
+    cy.get("#introduced").type("2029-03-19");
+    cy.get("#discontinued").clear();
+    cy.get("#discontinued").type("2023-07-09");
+    cy.get("select").select(computer.companyName);
     cy.get('input[Value="Save this computer"]').click();
     notification().should(
       "contain",
